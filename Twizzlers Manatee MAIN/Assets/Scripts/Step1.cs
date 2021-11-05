@@ -15,8 +15,14 @@ using UnityEngine;
 
 public class Step1 : MonoBehaviour
 {
-    [SerializeField] private Animator myAnimationController;
-    [SerializeField] private GameObject VRCameraRig = GameObject.Find("GlideOVR");
+    public Animator myAnimationController;
+    public GameObject VRCameraRig;
+
+    void Start()
+    {
+         Animator myAnimationController;
+         GameObject VRCameraRig = GameObject.Find("GlideOVR");
+    }
 
     private void OnTriggerEnter(Collider player)
     {

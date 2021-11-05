@@ -28,14 +28,11 @@ public class Mover : MonoBehaviour
 
     IEnumerator WaitAndDisplay()
     {
-        Debug.Log("coroutine started");
         transform.position = transform.position + Camera.main.transform.forward * distance * Time.deltaTime;
 
         yield return new WaitForSeconds(5f);
 
         //UIObject.SetActive(false);
         distance = 0;
-        Debug.Log("coroutine ended");
-
     }
 }
