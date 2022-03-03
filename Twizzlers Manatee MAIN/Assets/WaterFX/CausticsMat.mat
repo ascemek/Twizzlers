@@ -24,10 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 6083d2ccabe484c3daaae77ee74304ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: eecace3e841754786a0a519560dd6bbc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Size: 1
+    - _Size: 2.3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
