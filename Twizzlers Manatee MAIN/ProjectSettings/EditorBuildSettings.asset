@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/1)TheFirstBoatTransaction.unity
+    guid: dee2adc15db9f6548a8e0d77bf057010
+  - enabled: 1
     path: Assets/Scenes/1)Training.unity
     guid: fb34bff9767faa74f9825039bacaac29
   - enabled: 1

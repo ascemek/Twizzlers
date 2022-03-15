@@ -17,7 +17,7 @@ public class LevelChanger : MonoBehaviour
     public Animator animator;
     public float startingTime = 15f;
     [SerializeField] float currentTime = 0f;
-    //[SerializeField] Text countdownText;
+    [SerializeField] Text countdownText;
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class LevelChanger : MonoBehaviour
         {
 
             //countdownText.text = ("Out of time!");
-            FadeToLevel(3);
+            FadeToLevel(1);
             DisableCanvas();
             OnFadeComplete();
         }
