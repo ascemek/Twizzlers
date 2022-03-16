@@ -14,12 +14,15 @@ using UnityEngine;
 
 public class SodaCanCollision : MonoBehaviour
 {
+    public AudioSource audioSource;
+
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Sphere") //if the object collides with "Sphere" named object
+        if (collision.gameObject.name == "SodaSphere") //if the object collides with "Sphere" named object
         {
             Debug.Log("The soda can collided with sphere");
             Destroy(this.transform.gameObject); //destroy that object
+            audioSource.Play();
         }
     }
 }

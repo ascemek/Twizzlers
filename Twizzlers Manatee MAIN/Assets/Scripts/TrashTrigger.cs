@@ -21,8 +21,7 @@ public class TrashTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
-        UIObject.SetActive(false);
+        //UIObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider player)

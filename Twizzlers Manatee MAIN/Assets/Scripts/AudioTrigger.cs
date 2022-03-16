@@ -7,6 +7,7 @@ public class AudioTrigger : MonoBehaviour
     public AudioSource audioSource;
     public GameObject buttonPlaying;
     public GameObject buttonPlay;
+    private IEnumerator coroutine;
 
     void Start()
     {
@@ -17,8 +18,20 @@ public class AudioTrigger : MonoBehaviour
     public void PlayAudio()
     {
         audioSource.Play();
-        buttonPlaying.SetActive(true);
-        buttonPlay.SetActive(false);
+        StartCoroutine("WaitAndDisplay");
     }
 
+    IEnumerator WaitAndDisplay()
+    {
+        Debug.Log("coroutine started");
+        buttonPlaying.SetActive(true);
+        buttonPlay.SetActive(false);
+
+        yield return new WaitForSeconds(10f);
+
+        buttonPlaying.SetActive(false);
+        buttonPlay.SetActive(true);
+        Debug.Log("coroutine ended");
+
+    }
 }

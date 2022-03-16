@@ -9,6 +9,7 @@ public class SaveManateeName : MonoBehaviour
     //public GameObject name1;
     //public GameObject name2;
     public GameObject canvas1;
+    public string manateeName;
 
     /*
     private void Awake()
@@ -35,5 +36,10 @@ public class SaveManateeName : MonoBehaviour
         GameObject.Find("canvas1").SetActive(true);
         GameObject.Find("canvas2").SetActive(false);
         Debug.Log("Name picked: canvas1");
+    }
+
+    public void name(string manateeName)
+    {
+        this.manateeName = ("HarunAbi");
     }
 }

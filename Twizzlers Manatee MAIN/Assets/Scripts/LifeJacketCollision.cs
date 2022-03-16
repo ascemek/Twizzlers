@@ -14,12 +14,28 @@ using UnityEngine;
 
 public class LifeJacketCollision : MonoBehaviour
 {
+    public GameObject UIObject;
+    public AudioSource audioSource;
+    public GameObject arrowObject1;
+    public GameObject arrowObject2;
+
+    void Start()
+    {
+        UIObject.SetActive(false);
+        arrowObject1.SetActive(false);
+        arrowObject2.SetActive(false);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player") //if the object collides with player tagged object
         {
             Debug.Log("The player collided with a lifejacket");
             Destroy(this.transform.gameObject); //destroy that object
+            UIObject.SetActive(true);
+            audioSource.Play();
+            arrowObject1.SetActive(true);
+            arrowObject2.SetActive(true);
         }
     }
 }
