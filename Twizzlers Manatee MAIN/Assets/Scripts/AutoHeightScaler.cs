@@ -23,7 +23,7 @@ public class AutoHeightScaler : MonoBehaviour
 
     void OnEnable()
     {
-        Resize();
+        //Resize();
     }
 
 }

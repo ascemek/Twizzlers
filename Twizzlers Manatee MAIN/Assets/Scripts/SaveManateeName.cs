@@ -6,40 +6,63 @@ using UnityEngine.UI;
 
 public class SaveManateeName : MonoBehaviour
 {
-    //public GameObject name1;
-    //public GameObject name2;
-    public GameObject canvas1;
-    public string manateeName;
+    public GameObject canvas1, canvas2, canvas3;
+    public GameObject skittlesButton, oreooButton, twinxButton;
+    public Text changingText;
+    //public string name;
 
-    /*
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        //SceneManager.LoadScene(1);
+        DontDestroyOnLoad(canvas1);
+        DontDestroyOnLoad(canvas2);
+        DontDestroyOnLoad(canvas3);
+        canvas1.SetActive(false);
+        canvas2.SetActive(false);
+        canvas3.SetActive(false);
+
     }
-    */
 
-    //SceneManager.LoadScene("Simulation", LoadSceneMode.Single);
-    //GameObject.Find("Dioxygen").SetActive(false);
-
-    void Start()
+    public string setName(string _name)
     {
-        //GameObject.Find("canvas1").SetActive(false);
-        //GameObject.Find("canvas2").SetActive(false);
-        //DontDestroyOnLoad(GameObject.Find("canvas1"));
-        //DontDestroyOnLoad(canvas1);
+        name = _name;
+        return name;
     }
 
+    public void ChangeText(){
+        changingText.text = "Oreo";
+    }
 
+        
+
+
+    
+    //Baby Manatee
     public void NameFirstManatee()
     {
-        GameObject.Find("canvas1").SetActive(true);
-        GameObject.Find("canvas2").SetActive(false);
-        Debug.Log("Name picked: canvas1");
+        Debug.Log("Name picked: Skittles");
+        canvas1.SetActive(true);
+        
+        Destroy(skittlesButton);
+        Debug.Log("Skittles Button destroyed");
     }
 
-    public void name(string manateeName)
+    public void NameAdultManatee1()
     {
-        this.manateeName = ("HarunAbi");
+        Debug.Log("Name picked: Oreoo");
+        canvas2.SetActive(true);
+
+        Destroy(oreooButton);
+        Debug.Log("Oreoo Button destroyed");
     }
+
+    public void NameAdultManatee2()
+    {
+        Debug.Log("Name picked: Twinx");
+        canvas3.SetActive(true);
+
+        Destroy(twinxButton);
+        Debug.Log("Twinx Button destroyed");
+    }
+
+
 }

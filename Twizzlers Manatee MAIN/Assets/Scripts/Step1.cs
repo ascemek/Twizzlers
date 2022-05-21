@@ -21,7 +21,7 @@ public class Step1 : MonoBehaviour
     void Start()
     {
          Animator myAnimationController;
-         GameObject VRCameraRig = GameObject.Find("GlideOVR");
+         GameObject VRCameraRig = GameObject.FindWithTag("Player");
     }
 
     private void OnTriggerEnter(Collider player)
